@@ -22,7 +22,6 @@ import java.util.Vector;
 
 public class ChannelOneFragment extends Fragment {
     FragmentCh1Binding binding1;
-    Vector<YouTubeVideos> youtubeVideos = new Vector<>();
     private YTubeChannelsViewModel yTubeChannelsViewModel;
     private YouTubeVideosAdapter videoAdapter;
 
@@ -41,7 +40,7 @@ public class ChannelOneFragment extends Fragment {
         binding1 = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_ch1, container, false);
         View view = binding1.getRoot();
-        binding1.channelname.setText(" Yahya ");
+        binding1.channelname.setText(" Udacity ");
 
 
         binding1.recycler.setHasFixedSize(true);
@@ -54,7 +53,7 @@ public class ChannelOneFragment extends Fragment {
 
 
     private void subscribeObservers() {
-        yTubeChannelsViewModel.youTubeChannels().observe(this, videos -> {
+        yTubeChannelsViewModel.youTubeChannels1().observe(this, videos -> {
             videoAdapter.setYouTubeVideos(videos);
         });
     }
