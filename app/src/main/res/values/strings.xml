@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Internship Task</string>
+
+    <string name="nav1">One</string>
+    <string name="nav2">Two</string>
+    <string name="nav3">Three</string>
+    <string name="nav4">Four</string>
+    <string name="nav5">Five</string>
+
+</resources>
