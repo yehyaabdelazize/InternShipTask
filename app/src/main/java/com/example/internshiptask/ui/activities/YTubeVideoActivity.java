@@ -22,7 +22,7 @@ public class YTubeVideoActivity extends YouTubeBaseActivity {
         onInitializedListener=new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.loadVideo("");
+                youTubePlayer.loadVideo(youTubePlayer.toString());
                 playBinding.youtubeplayerview.initialize("AIzaSyB43vfEpUD3NFH5ZV3l1UXcJOZ5aZ7SIZQ",onInitializedListener);
             }
 

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,7 +48,14 @@ public class ChannelOneFragment extends Fragment {
         binding1.recycler.setLayoutManager(new LinearLayoutManager(getContext()));
         videoAdapter = new YouTubeVideosAdapter();
         binding1.recycler.setAdapter(videoAdapter);
-
+        binding1.switchSubscribe.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    binding5.subscribetxt.setText("subscribed");
+                }
+            }
+        });
         return view;
     }
 
